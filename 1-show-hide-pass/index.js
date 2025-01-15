@@ -13,7 +13,16 @@ const hidePassButton = document.createElement('button');
 hidePassButton.style.width = '30px';
 hidePassButton.style.height = '30px';
 
+
 window.addEventListener('load', (e) => {
     passContainer.appendChild(passBox);
     passContainer.appendChild(hidePassButton);
+})
+
+hidePassButton.addEventListener('click', () => {
+    if (passBox.type === 'text') {
+        passBox.type = 'password';
+    } else if (passBox.type === 'password') {
+        passBox.type = 'text';
+    }
 })
