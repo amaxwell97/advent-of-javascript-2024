@@ -47,3 +47,11 @@ window.addEventListener('load', () => {
     comboboxContainer.appendChild(comboboxTitle);
     comboboxContainer.appendChild(arrowSpan);
 })
+
+const expandList = () => {
+    
+}
+
+arrowSpan.addEventListener('click', () => {
+
+})
