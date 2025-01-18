@@ -1,5 +1,12 @@
 const comboboxContainer = document.querySelector('.combobox-container');
 
+const comboboxTitle = document.createElement('p');
+comboboxTitle.innerHTML = 'Your Favorite Holiday Movie';
+
+const arrowSpan = document.createElement('span');
+const dropArrow = document.createElement('img');
+dropArrow.src = 'dropdown-arrow.svg';
+
 let movieLibrary = [
     {
         title: 'Christmas Carol',
@@ -32,3 +39,8 @@ let movieLibrary = [
         img: `rudolph-the-red-nosed-reindeer.png`,
     },
 ]
+
+window.addEventListener('load', () => {
+    comboboxContainer.appendChild(comboboxTitle);
+    comboboxContainer.appendChild(dropArrow);
+})
