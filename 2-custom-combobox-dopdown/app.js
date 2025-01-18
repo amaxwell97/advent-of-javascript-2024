@@ -3,9 +3,12 @@ const comboboxContainer = document.querySelector('.combobox-container');
 const comboboxTitle = document.createElement('p');
 comboboxTitle.innerHTML = 'Your Favorite Holiday Movie';
 
-const arrowSpan = document.createElement('span');
 const dropArrow = document.createElement('img');
 dropArrow.src = 'dropdown-arrow.svg';
+dropArrow.classList.add('arrow-img');
+const arrowSpan = document.createElement('span');
+arrowSpan.classList.add('arrow-wrapper');
+arrowSpan.appendChild(dropArrow);
 
 let movieLibrary = [
     {
@@ -42,5 +45,5 @@ let movieLibrary = [
 
 window.addEventListener('load', () => {
     comboboxContainer.appendChild(comboboxTitle);
-    comboboxContainer.appendChild(dropArrow);
+    comboboxContainer.appendChild(arrowSpan);
 })
